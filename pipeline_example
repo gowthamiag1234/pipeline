@@ -6,6 +6,24 @@ pipeline {
             steps { 
                echo 'This is a minimal pipeline.' 
             }
+       }
+       
+       stages {
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
         }
+        stage('Package') {
+            steps {
+                echo 'Packing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+
     }
 }
